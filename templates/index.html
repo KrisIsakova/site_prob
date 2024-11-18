@@ -4,41 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kristina's Portfolio</title>
+    <!-- Подключение шрифта -->
     <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="stylesheet" href="/static/css/mobile.css">
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/mobile.css">
 </head>
-
 <body>
     <div class="container">
+        <!-- Секция портфолио -->
         <section class="portfolio-section">
             <h2>MY PORTFOLIO</h2>
-            <img src="/static/img/portfolio.png" alt="Portfolio" class="portfolio-img">
+            <img src="static/img/portfolio.png" alt="Portfolio" class="portfolio-img">
             <a href="https://kwork.ru/user/_k_i_v_" target="_blank">
-                <img src="/static/img/button-portfolio.png" alt="Portfolio Button" class="portfolio-button">
+                <img src="static/img/button-portfolio.png" alt="Portfolio Button" class="portfolio-button">
             </a>
         </section>
 
+        <!-- Секция контактов -->
         <section class="contact-text">
             <h2>IF YOU WANT TO CONTACT ME, CLICK HERE</h2>
             <div class="contact-icons">
                 <a href="https://t.me/zhhhmp" target="_blank">
-                    <img src="/static/img/telegram.png" alt="Telegram" class="contact-icon">
+                    <img src="static/img/telegram.png" alt="Telegram" class="contact-icon">
                 </a>
                 <a href="https://instagram.com/yourinstagram" target="_blank">
-                    <img src="/static/img/instagram.png" alt="Instagram" class="contact-icon">
+                    <img src="static/img/instagram.png" alt="Instagram" class="contact-icon">
                 </a>
-                <img src="/static/img/mail.png" alt="Email" class="contact-icon" id="copy-email-button">
+                <img src="static/img/mail.png" alt="Email" class="contact-icon" id="copy-email-button">
             </div>
             <p id="email-copied-message" style="display:none; color: green; font-size: 14px; margin-top: 10px;">Email copied!</p>
             
-            <!-- Кнопка открытия всплывающего окна -->
-            <img id="open-form" src="/static/img/Wili1.png" alt="Свяжитесь со мной" class="wili1-button">
+            <!-- Кнопка открытия формы -->
+            <img id="open-form" src="static/img/Wili1.png" alt="Свяжитесь со мной" class="wili1-button">
             
             <!-- Затемняющий фон -->
             <div id="overlay" style="display:none;"></div>
             
-            <!-- Всплывающее окно для ввода контактных данных -->
+            <!-- Всплывающее окно -->
             <div id="email-dialog" style="display:none;">
                 <h3>Введите свои контактные данные</h3>
                 <input type="text" id="contact-input" placeholder="Введите почту или номер телефона">
@@ -48,14 +51,15 @@
         </section>
     </div>
 
+    <!-- Скрипты -->
     <script>
-        // Показать затемнение и всплывающее окно
+        // Показать затемнение и форму
         document.getElementById("open-form").addEventListener("click", function() {
             document.getElementById("email-dialog").style.display = "block";
             document.getElementById("overlay").style.display = "block";
         });
 
-        // Закрыть всплывающее окно и затемнение
+        // Закрыть форму
         document.getElementById("close-dialog").addEventListener("click", function() {
             document.getElementById("email-dialog").style.display = "none";
             document.getElementById("overlay").style.display = "none";
