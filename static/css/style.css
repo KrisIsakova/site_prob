@@ -1,0 +1,150 @@
+/* Основные стили для всей страницы */
+body {
+    font-family: 'Michroma', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ca0a0a;
+    text-align: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
+    
+   
+}
+
+.container {
+    width: 768px;
+    height: 1940px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон */
+    background-image: url("/static/img/vec1.png"); /* Устанавливаем фон */
+    background-size: 101% auto; /* Устанавливаем ширину 90% от контейнера и сохраняем пропорции */
+    background-repeat: no-repeat; /* Отключаем повторение изображения */
+    background-position: top center; /* Размещаем изображение по центру сверху */
+    box-shadow: 0 0 15px rgb(56, 0, 0);
+    overflow-y: auto;
+}
+
+
+
+
+/* Секция портфолио */
+.portfolio-section {
+    margin-top: 700px; /* Отступ сверху */
+}
+
+.portfolio-section h2 {
+    font-size: 20px; /* Размер заголовка секции портфолио */
+    font-family: 'Michroma', sans-serif; /* Применяем шрифт Michroma */
+    color: #000;
+    margin-bottom: 50px; /* Отступ снизу */
+    text-align: center; /* Центрируем заголовок */
+}
+
+.portfolio-img {
+    width: 600px; /* Ширина каждого изображения */
+    height: 250px; /* Автоматическая высота для сохранения пропорций */ 
+    border-radius: 5px; /* Легкое скругление углов */
+}
+
+/* Кнопка для портфолио */
+.portfolio-button {
+    width: 265px;
+    height: 57px;
+    display: inline-block; /* Делаем кнопку блочно-строчным элементом */
+    margin-top: 50px; /* Отступ сверху */
+    padding: 10px 20px; /* Внутренние отступы кнопки */
+    /*color: #d32222; /* Цвет текста кнопки */
+    text-transform: uppercase; /* Преобразуем текст кнопки в верхний регистр */
+    border-radius: 5px; /* Скругленные углы кнопки */
+    cursor: pointer; /* Меняем указатель на курсор при наведении */
+    font-weight: bold; /* Жирный текст */
+    text-align: center; /* Центрируем текст внутри кнопки */
+    margin-bottom: 80px; /* Новый отступ снизу */
+}
+
+/* Секция контактов */
+.contact-text {
+    font-family: 'Michroma', sans-serif; /* Применяем шрифт Michroma */
+    color: #a01313; /* Красный цвет текста */
+    text-transform: uppercase; /* Преобразуем текст в верхний регистр */
+    font-size: 14px; /* Задайте нужный размер шрифта */
+    text-align: center; /* Центрируем текст */
+}
+
+
+.contacts {
+    margin-top: 100px; /* Отступ сверху */
+    text-align: center; /* Центрируем содержимое */
+}
+
+.contacts p {
+    font-size: 100px; /* Размер шрифта текста в секции контактов */
+    color: #d32222; /* Красный цвет текста */
+}
+
+/* Иконки контактов */
+.contact-icons {
+    display: flex; /* Используем flex-контейнер */
+    justify-content: center; /* Центрируем иконки */
+    gap: 150px; /* Расстояние между иконками */
+    margin-top: 60px; /* Отступ сверху */
+}
+
+.contact-icon {
+    width: 50px; /* Ширина каждой иконки */
+    height: 50px; /* Автоматическая высота */
+    cursor: pointer; /* Меняем указатель на курсор при наведении */
+}
+
+/* Сообщение о копировании email */
+#email-copied-message {
+    margin-top: 10px; /* Отступ сверху */
+    color: green; /* Зеленый цвет текста */
+    font-size: 14px; /* Размер шрифта сообщения */
+}
+
+.footer-image {
+    margin-top: 20px; /* Отступ сверху для разделения от других элементов */
+    text-align: center; /* Центрируем изображение */
+    
+}
+
+.footer-image img {
+    width: 250px; /* Задайте желаемую ширину */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    border-radius: 0px; /* Легкое скругление углов, при необходимости */
+}
+
+
+/* Мобильная версия */
+@media (max-width: 540px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+        height: auto;
+    }
+    
+    .portfolio-section {
+        margin-top: 500px;
+    }
+
+    .portfolio-img {
+        width: 90%; /* Заполняет ширину экрана с отступами */
+        height: auto;
+    }
+
+    .contacts p {
+        font-size: 40px;
+    }
+
+    .contact-icons {
+        gap: 30px; /* Уменьшаем расстояние между иконками */
+    }
+
+    .portfolio-button {
+        width: 50%;
+    }
+}
